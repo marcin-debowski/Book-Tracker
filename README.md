@@ -9,7 +9,7 @@ docker compose up --build
 ```
 
 Frontend: http://localhost:5173  
-Backend: http://localhost:4000 (np. /api/books)
+Backend: http://localhost:4000
 
 ### Uruchomienie lokalne (bez Dockera)
 

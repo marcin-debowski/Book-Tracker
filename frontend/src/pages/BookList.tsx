@@ -27,7 +27,7 @@ const BookList = () => {
   };
 
   return (
-    <div className='flex items-center m-4 w-full flex-col'>
+    <div className='flex items-center w-full flex-col'>
       <AddBook onAdded={(book) => setBooks((prev) => [...prev, book])} />
       {books.map((book) => (
         <Book key={book.id} book={book} onToggle={handleToggle} />
