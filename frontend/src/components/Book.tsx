@@ -19,7 +19,11 @@ const Book = ({ book, onToggle }: Props) => {
       </h2>
       <button
         onClick={() => onToggle(book.id)}
-        className='bg-blue-500 text-white rounded-md p-2 w-1/6 min-w-[6rem]'
+        className={`${
+          book.read
+            ? "bg-red-600 hover:bg-red-700"
+            : "bg-blue-500 hover:bg-blue-600"
+        } text-white rounded-md p-2 w-1/6 min-w-[6rem] transition-colors`}
       >
         {book.read ? "Read" : "To read"}
       </button>

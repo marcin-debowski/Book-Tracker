@@ -3,7 +3,7 @@ import db from "../config/db";
 
 export const getBooks = (_req: Request, res: Response, next: NextFunction) => {
   db.all(
-    "SELECT id, title, author, read FROM books ORDER BY id",
+    "SELECT id, title, author, read FROM books ORDER BY read",
     (err, rows) => {
       if (err) return next(err);
       const books = (rows || []).map((book: any) => ({
